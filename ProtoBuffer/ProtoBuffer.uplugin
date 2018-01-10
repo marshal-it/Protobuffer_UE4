@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "ProtoBuffer",
+	"Description": "Google ProtoBuf in UE4.14",
+	"Category": "Google",
+	"CreatedBy": "TeenWolf",
+	"CreatedByURL": "http://www.unitykiller.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/marshal-it/Protobuffer_UE4.git",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "ProtoBuffer",
+			"Type": "Developer",
+			"LoadingPhase": "Default"
+		}
+	]
+}
