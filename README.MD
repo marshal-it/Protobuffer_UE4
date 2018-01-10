@@ -8,10 +8,10 @@ protobuf version is 3.5.1
 
 [tip]: have a "libprotobufd.zip" in "Protobuffer_UE4\ProtoBuffer\ThirdParty\lib\Debug",you must unzip by self
 
-![image](https://github.com/marshal-it/Protobuffer_UE4/blob/master/Resources/1.png)
+![image](https://github.com/marshal-it/Protobuffer_UE4/blob/master/ProtoBuffer/Resources/1.png)
 
-![image](https://github.com/marshal-it/Protobuffer_UE4/blob/master/Resources/2.png)
+![image](https://github.com/marshal-it/Protobuffer_UE4/blob/master/ProtoBuffer/Resources/2.png)
 
-![image](https://github.com/marshal-it/Protobuffer_UE4/blob/master/Resources/3.png)
+![image](https://github.com/marshal-it/Protobuffer_UE4/blob/master/ProtoBuffer/Resources/3.png)
 
-![image](https://github.com/marshal-it/Protobuffer_UE4/blob/master/Resources/4.png)
+![image](https://github.com/marshal-it/Protobuffer_UE4/blob/master/ProtoBuffer/Resources/4.png)
