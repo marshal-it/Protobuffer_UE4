@@ -1,4 +1,4 @@
-google protobuf in ue4.14
+google protobuf in ue4.16
 
 this is a ue4 plugin , you only copy this protobuffer plugin in your project's plugins directory.
 
