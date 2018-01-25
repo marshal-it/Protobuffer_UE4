@@ -1,0 +1,18 @@
+{
+	"FileVersion" : 1,
+	"FriendlyName" : "JSON Query",
+	"Version" : 4,
+	"VersionName" : "0.10",
+	"CreatedBy" : "update teeenwolf",
+	"CreatedByURL" : "Http://www.v5xy.com",
+	"Description" : "Exposes nodes to Blueprint that allow you to easily post and request pages on webservers through the JSON protocol.",
+	"Category" : "Web",
+	
+	"Modules" :
+	[
+		{
+			"Name" : "JSONQuery",
+			"Type" : "Runtime"
+		}
+	]
+}
