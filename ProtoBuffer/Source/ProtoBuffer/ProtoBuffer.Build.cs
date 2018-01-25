@@ -6,11 +6,11 @@ using System.IO;
 public class ProtoBuffer : ModuleRules
 {
 
-    private string LibPathR
+    private string LibProtoPathR
     {
         get { return Path.GetFullPath(Path.Combine(ModuleDirectory, "../../ThirdParty/lib/Release/libprotobuf.lib")); }
     }
-    private string LibPathD
+    private string LibProtoPathD
     {
         get { return Path.GetFullPath(Path.Combine(ModuleDirectory, "../../ThirdParty/lib/Debug/libprotobufd.lib")); }
     }
@@ -19,7 +19,7 @@ public class ProtoBuffer : ModuleRules
         get { return Path.GetFullPath(Path.Combine(ModuleDirectory, "../../ThirdParty/include")); }
     }
 
-    public ProtoBuffer(TargetInfo Target)
+    public ProtoBuffer(ReadOnlyTargetRules Target):base(Target)
 	{
 		
 		PublicIncludePaths.AddRange(
@@ -59,6 +59,9 @@ public class ProtoBuffer : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "JSONQuery",
+                "HTTP",
+                "json"
 
 				// ... add private dependencies that you statically link with here ...	
 			}
@@ -74,7 +77,10 @@ public class ProtoBuffer : ModuleRules
 
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
-            PublicAdditionalLibraries.Add(LibPathR);
+            PublicAdditionalLibraries.Add(LibProtoPathR);
         }
+
+        bEnableUndefinedIdentifierWarnings = false;
+        bEnableShadowVariableWarnings = false;
     }
 }

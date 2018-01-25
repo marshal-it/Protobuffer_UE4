@@ -28,5 +28,11 @@ class UProtoBufferBPLibrary : public UBlueprintFunctionLibrary
 	GENERATED_UCLASS_BODY()
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "ProtoBuffer sample test testing"), Category = "ProtoBufferTesting")
-	static float ProtoBufferSampleFunction(float Param);
+	static float ProtoBufferSampleFunction(float Param, FString Host, int32 Ip);
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "ReProtobuf", Keywords = "ProtoBuffer sample test testing"), Category = "ProtoBufferTesting")
+	static void ReProtobuf(FString ProtoName);
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SendMessage", Keywords = "ProtoBuffer sample test testing"), Category = "ProtoBufferTesting")
+	static void SendMsg();
 };

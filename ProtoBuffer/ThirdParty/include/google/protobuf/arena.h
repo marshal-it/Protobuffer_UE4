@@ -159,11 +159,11 @@ struct ArenaOptions {
 
 // Support for non-RTTI environments. (The metrics hooks API uses type
 // information.)
-#ifndef GOOGLE_PROTOBUF_NO_RTTI
-#define RTTI_TYPE_ID(type) (&typeid(type))
-#else
+// #ifndef GOOGLE_PROTOBUF_NO_RTTI
+// #define RTTI_TYPE_ID(type) (&typeid(type))
+// #else
 #define RTTI_TYPE_ID(type) (NULL)
-#endif
+//#endif
 
 // Arena allocator. Arena allocation replaces ordinary (heap-based) allocation
 // with new/delete, and improves performance by aggregating allocations into

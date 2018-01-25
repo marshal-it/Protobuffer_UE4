@@ -39,7 +39,8 @@
 
 #ifndef GOOGLE_PROTOBUF_WIRE_FORMAT_LITE_H__
 #define GOOGLE_PROTOBUF_WIRE_FORMAT_LITE_H__
-
+#pragma warning(disable:4146)
+#pragma warning(disable:4946)
 #include <string>
 
 #include <google/protobuf/stubs/common.h>

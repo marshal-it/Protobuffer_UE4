@@ -660,13 +660,14 @@ class LIBPROTOBUF_EXPORT GeneratedMessageReflection PROTOBUF_FINAL : public Refl
 // On MSVC, this should be detected automatically.
 template<typename To, typename From>
 inline To dynamic_cast_if_available(From from) {
-#if defined(GOOGLE_PROTOBUF_NO_RTTI) || (defined(_MSC_VER)&&!defined(_CPPRTTI))
-  // Avoid the compiler warning about unused variables.
-  (void)from;
+// #if defined(GOOGLE_PROTOBUF_NO_RTTI) || (defined(_MSC_VER)&&!defined(_CPPRTTI))
+//   // Avoid the compiler warning about unused variables.
+//   (void)from;
+//   return NULL;
+// #else
+//   return dynamic_cast<To>(from);
+// #endif
   return NULL;
-#else
-  return dynamic_cast<To>(from);
-#endif
 }
 
 // Tries to downcast this message to a generated message type.
@@ -688,15 +689,15 @@ T* DynamicCastToGenerated(const Message* from) {
   const Message* unused = static_cast<T*>(NULL);
   (void)unused;
 
-#if defined(GOOGLE_PROTOBUF_NO_RTTI) || \
-  (defined(_MSC_VER) && !defined(_CPPRTTI))
+// #if defined(GOOGLE_PROTOBUF_NO_RTTI) || \
+//   (defined(_MSC_VER) && !defined(_CPPRTTI))
   bool ok = &T::default_instance() ==
             from->GetReflection()->GetMessageFactory()->GetPrototype(
                 from->GetDescriptor());
   return ok ? down_cast<T*>(from) : NULL;
-#else
-  return dynamic_cast<T*>(from);
-#endif
+// #else
+//   return dynamic_cast<T*>(from);
+// #endif
 }
 
 template <typename T>

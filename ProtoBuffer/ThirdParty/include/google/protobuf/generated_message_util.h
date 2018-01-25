@@ -157,7 +157,8 @@ struct LIBPROTOBUF_EXPORT FieldMetadata {
 
 inline bool IsPresent(const void* base, uint32 hasbit) {
   const uint32* has_bits_array = static_cast<const uint32*>(base);
-  return has_bits_array[hasbit / 32] & (1u << (hasbit & 31));
+	  bool b4 = { (has_bits_array[hasbit / 32] & (1u << (hasbit & 31))) != 0};
+	  return b4;
 }
 
 inline bool IsOneofPresent(const void* base, uint32 offset, uint32 tag) {

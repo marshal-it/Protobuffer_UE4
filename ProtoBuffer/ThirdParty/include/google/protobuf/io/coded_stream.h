@@ -866,7 +866,8 @@ class LIBPROTOBUF_EXPORT CodedOutputStream {
   }
 
   static bool IsDefaultSerializationDeterministic() {
-    return google::protobuf::internal::NoBarrier_Load(&default_serialization_deterministic_);
+	  bool b4 = { google::protobuf::internal::NoBarrier_Load(&default_serialization_deterministic_) != 0 };
+	  return b4;
   }
 
  private:
